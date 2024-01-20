@@ -1,0 +1,29 @@
+body {
+  /* border: black 5px solid; */
+  padding: 0;
+  margin: 0;
+  /* background-color: yellow; */
+}
+
+.nav-bar {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(183, 223, 210);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  font-size: 25px;
+  /* border: 1px solid bisque; */
+}
+
+.nav-bar a:hover {
+  color: rgb(4, 20, 37);
+  background-color: yellow;
+}
+
+/* Leaflet Map */
+#map { height: 180px; }
