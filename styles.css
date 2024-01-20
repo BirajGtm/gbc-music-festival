@@ -1,14 +1,16 @@
 body {
   /* border: black 5px solid; */
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
   /* background-color: yellow; */
 }
 
 .nav-bar {
-  margin-top: 3%;
+  /* margin-top: 3%; */
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background-color: rgb(183, 223, 210);
 }
 
