@@ -14,7 +14,7 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: rgb(80, 214, 255);
+            background-color: #425c76;
         }
 
         .nav-bar {
@@ -55,37 +55,48 @@
             background-color: #152e3f;
         }
 
-        .cover-section {
-            background: url('https://www.holymountaintreks.com/uploads/2020/10/festivals-in-nepal.jpg') center/cover no-repeat;
+      .cover-section {
+             background: url('https://www.holymountaintreks.com/uploads/2020/10/festivals-in-nepal.jpg') center/cover no-repeat;
             color: #ffffff;
             text-align: center;
-        }
+            margin: 15px;
+            border-radius: 8px;
+        } 
 
         .overlay {
-            padding: 100px;
-            background-color: rgba(69, 61, 107, 0.2);
+            padding: 150px;
             transition: 0.3s ease-in-out;
         }
 
         .overlay:hover {
-            padding: 110px;
+            border-radius: 8px;
+            padding: 155px;
             background-color: rgba(69, 61, 107, 0.5);
             
         }
 
-        .festival-name,
-        .festival-details {
-            position: relative;
-            margin-bottom: 20px;
+        .heading,
+        details {
+            margin-bottom: 10px;
         }
 
-        .festival-name {
+        .heading {
             font-size: 36px;
             font-weight: bold;
         }
 
-        .festival-details {
+        .details {
             font-size: 18px;
+            color: azure;
+        }
+
+        .ticket-heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            color: #f3fcff;
         }
 
         .ticket-section {
@@ -95,8 +106,7 @@
         }
 
         .ticket-option {
-            height: 300px;
-            width:800px;
+            width:100%;
             margin: 0 5px;
             padding: 30px;
             border-radius: 10px;
@@ -117,18 +127,14 @@
             border-radius: 10px;
         }
 
-        .tbg-premium{
+        .tbg-premium, .tbg-normal{
 
             background-color: rgba(66, 108, 142, 0.5);
         }
 
-        .tbg-normal{
-
-            background-color: rgba(28, 90, 142, 0.5);
-}
 
         .ticket-bg:hover{
-            background-color: rgba(156, 49, 49, 0.5);
+            background-color: #9c313180;
             padding: 18px;
         }
 
@@ -159,7 +165,11 @@
         }
 
         /* Leaflet Map */
-        #map { height: 180px; }
+        #map {
+             height: 250px; 
+             margin: 15px;
+             border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -176,27 +186,33 @@
 
     <div class="cover-section">
         <div class="overlay">
-        <div class="festival-name">Cultural Music Festival</div>
-        <div class="festival-details">
+        <h1 class="heading">Cultural Music Festival</h1>
+        <div class="details">
             <p>Date: February 3-5</p>
             <p>Location: Kathmandu, Nepal</p>
         </div>
     </div>
     </div>
+    <div class="ticket-heading">
+        <h1 class="heading">Get your tickets now!</h1>
+        <div class="details"><ion-icon name="ticket-outline"></ion-icon>
+            Multiple Options to choose from <ion-icon name="ticket-outline"></ion-icon></div>
+    </div>
+   
     <div class="ticket-section">
+        
         <div class="ticket-option ticket-premium">
             <div class="ticket-bg tbg-premium">
-                <h2 >Premium Ticket</h2>
+                <h2 ><ion-icon name="musical-notes-outline"></ion-icon> Premium</h2>
                 <p>Exclusive access to front rows</p>
                 <p>VIP Lounge access</p>
                 <p>Price: $150</p>
                 <button>Buy Now</button>
             </div>
-           
         </div>
         <div class="ticket-option ticket-normal">
             <div class="ticket-bg tbg-normal">          
-            <h2>Normal Ticket</h2>
+            <h2><ion-icon name="musical-note-outline"></ion-icon> Normal</h2>
             <p>General admission</p>
             <p>Access to main event area</p>
             <p>Price: $75</p>
@@ -208,12 +224,14 @@
     <div id="map"></div>
     <script type="text/javascript" src="app.js"></script>
     <script> 
-        const map = L.map('map').setView([48.8584, 2.2945], 16);
+        const map = L.map('map').setView([27.695000978800444, 85.31483972431158], 16);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
             maxZoom: 19, 
             attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
         }).addTo(map);
-        L.marker([48.8584, 2.2945]).addTo(map).bindPopup("Music Festival").openPopup();
+        L.marker([27.695000978800444, 85.31483972431158]).addTo(map).bindPopup('<ion-icon name="navigate-circle-outline"></ion-icon>' + "Music Festival").openPopup();
     </script> 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
