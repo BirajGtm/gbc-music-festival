@@ -71,17 +71,17 @@
       }
 
       .cover-section {
-        background: url("https://www.holymountaintreks.com/uploads/2020/10/festivals-in-nepal.jpg")
-          center/cover no-repeat;
+        background: url("https://wownepal.com.np/wp-content/uploads/2022/12/Thumbnail.jpg")bottom/cover no-repeat;
         color: #ffffff;
-        text-align: center;
         margin: 15px;
         border-radius: 8px;
+        border: 2px solid rgb(113, 195, 240);
       }
 
       .overlay {
         padding: 150px;
         transition: 0.3s ease-in-out;
+        background-color: rgba(69, 61, 107, 0.3);
       }
 
       .overlay:hover {
@@ -97,7 +97,7 @@
 
       .heading {
         font-family: "Josefin Sans", sans-serif;
-        font-size: 36px;
+        font-size: 40px;
         font-weight: bold;
       }
 
@@ -113,21 +113,26 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
-        color: #f3fcff;
+        color: #f3fcff; 
+        border: 2px solid rgb(113, 195, 240);
+        margin: 20px;
+        border-radius: 8px;
       }
 
       .ticket-section {
         display: flex;
         justify-content: center;
         margin: 10px;
+        
       }
 
       .ticket-option {
         width: 100%;
         margin: 0 5px;
         padding: 30px;
-        border-radius: 10px;
         text-align: center;
+        border: 2px solid rgb(113, 195, 240);
+        border-radius: 8px;
       }
 
       .ticket-premium {
@@ -154,9 +159,9 @@
         padding: 18px;
       }
 
-      .ticket-option h2 {
+      .ticket-option h2, .ticket-heading h2 {
         font-size: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         color: azure;
       }
 
@@ -184,12 +189,13 @@
         height: 250px;
         margin: 15px;
         border-radius: 8px;
+        border: 2px solid rgb(113, 195, 240);
       }
     </style>
   </head>
   <body>
     <nav class="nav-bar">
-      <p class="logo">CMF / Kathmandu</p>
+      <p class="logo">EMF / Kathmandu</p>
 
       <div class="nav-links">
         <a href="#">Home</a>
@@ -201,15 +207,15 @@
 
     <div class="cover-section">
       <div class="overlay">
-        <h1 class="heading">Cultural Music Festival</h1>
+        <h1 class="heading">Emerging Music Festival</h1>
         <div class="details">
-          <p>Date: February 3-5</p>
+          <p><ion-icon name="calendar-number-outline"></ion-icon> Date: February 3-5</p>
           <p>Location: Kathmandu, Nepal</p>
         </div>
       </div>
     </div>
     <div class="ticket-heading">
-      <h1 class="heading">Get your tickets now!</h1>
+      <h2>Get your tickets now!</h2>
       <div class="details">
         <ion-icon name="ticket-outline"></ion-icon> Multiple Options to choose
         from <ion-icon name="ticket-outline"></ion-icon>
@@ -220,18 +226,18 @@
       <div class="ticket-option ticket-premium">
         <div class="ticket-bg tbg-premium">
           <h2><ion-icon name="musical-notes-outline"></ion-icon> Premium</h2>
-          <p>Exclusive access to front rows</p>
-          <p>VIP Lounge access</p>
-          <p>Price: $150</p>
+          <p> <ion-icon name="star-half-outline"></ion-icon>Exclusive access to front rows</p>
+          <p><ion-icon name="star-half-outline"></ion-icon> VIP Lounge access</p>
+          <p><ion-icon name="pricetags-outline"></ion-icon> Price: $150</p>
           <button>Buy Now</button>
         </div>
       </div>
       <div class="ticket-option ticket-normal">
         <div class="ticket-bg tbg-normal">
           <h2><ion-icon name="musical-note-outline"></ion-icon> Normal</h2>
-          <p>General admission</p>
-          <p>Access to main event area</p>
-          <p>Price: $75</p>
+          <p><ion-icon name="star-half-outline"></ion-icon> General admission</p>
+          <p><ion-icon name="star-half-outline"></ion-icon> Access to main event area</p>
+          <p><ion-icon name="pricetags-outline"></ion-icon> Price: $75</p>
           <button>Buy Now</button>
         </div>
       </div>
